@@ -2,7 +2,7 @@ import pygame
 import sys
 import random
 
-import support_funcitons
+import support_functions
 
 def game(snake):
 
@@ -18,7 +18,7 @@ def game(snake):
     frame_size_x = 300
     frame_size_y = 300
 
-    points, adjacent_points, coords, adjacent_coords = support_funcitons.get_adjacent_list(frame_size_x, frame_size_x)
+    points, adjacent_points, coords, adjacent_coords = support_functionspy.get_adjacent_list(frame_size_x, frame_size_x)
     # route = hamiltonian_route(points,adjacent_list)
 
     # Checks for errors encountered
@@ -141,9 +141,9 @@ def game(snake):
         #
         # iterator += 1
         if not route:
-            route = support_funcitons.pathfinder(snake,'brute',food_pos, points,
-                                                 adjacent_points, coords,
-                                                 adjacent_coords)
+            route = support_functionspy.pathfinder(snake, 'brute', food_pos, points,
+                                                   adjacent_points, coords,
+                                                   adjacent_coords)
             iterator = 0
 
         if route:
